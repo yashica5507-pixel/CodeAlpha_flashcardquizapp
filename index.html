@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Flashcard Pro</h1>
+            <p id="card-counter">1 of 10</p>
+        </header>
+        
+        <main class="quiz-section">
+            <div class="card" id="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <span class="label">QUESTION</span>
+                        <p id="question-text">Loading...</p>
+                    </div>
+                    <div class="card-back">
+                        <span class="label">ANSWER</span>
+                        <p id="answer-text">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn">←</button>
+                <button id="flip-btn" class="action-btn">Show Answer</button>
+                <button id="next-btn" class="nav-btn">→</button>
+            </div>
+        </main>
+
+        <button id="toggle-manage-btn">⚙️ Manage Cards</button>
+
+        <section id="admin-panel" class="hidden">
+            <div class="input-group">
+                <input type="text" id="new-question" placeholder="Enter Question...">
+                <input type="text" id="new-answer" placeholder="Enter Answer...">
+            </div>
+            
+            <div class="admin-actions">
+                <button id="add-btn" class="success-btn">Add New</button>
+                <button id="edit-load-btn" class="warning-btn">Edit Current</button>
+                <button id="save-edit-btn" class="save-btn" style="display:none;">Save Changes</button>
+                <button id="delete-btn" class="danger-btn">Delete Card</button>
+            </div>
+            <button id="reset-btn" class="reset-link">Restore Defaults</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
